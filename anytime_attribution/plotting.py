@@ -96,12 +96,18 @@ def fig_e4(syn: dict, cri: dict, out: str):
     ax[0].plot([r - 0.02 for r in rs], [_last(syn["results"][str(r)]["naive_wrong_rate"]) for r in syn["results"]], "o-", color=OI["orange"], label="Naive (Γ = 1)")
     ax[0].plot([r + 0.02 for r in rs], [_last(syn["results"][str(r)]["robust_wrong_rate"]) for r in syn["results"]], "s-", color=OI["blue"], label="Robust (Γ = r)")
     ms = syn["misspecified_r_true_3"]["by_gamma_used"]; g = sorted(ms, key=float)
-    ax[0].plot([3.0] * len(g), [_last(ms[k]["robust_wrong_rate"]) for k in g], "^", color=OI["purple"], label="Robust, Γ < r (misspecified)")
+    under = [k for k in g if float(k) < 3.0]; wellsp = [k for k in g if float(k) >= 3.0]
+    xo = {k: 3.0 + 0.14 * (i - (len(under) - 1) / 2) for i, k in enumerate(under)}
+    ax[0].plot([xo[k] for k in under], [_last(ms[k]["robust_wrong_rate"]) for k in under], "^", color=OI["purple"], label=r"Robust, $\Gamma_{\mathrm{used}} < r_{\mathrm{true}} = 3$ (misspecified)")
+    ax[0].plot([3.0 + 0.2] * len(wellsp), [_last(ms[k]["robust_wrong_rate"]) for k in wellsp], "D", color=OI["blue"], label=r"Robust, $\Gamma_{\mathrm{used}} = r_{\mathrm{true}} = 3$ (well specified)")
+    for i, k in enumerate(under):
+        lo = _last(ms[k]["robust_wrong_rate"]) < 0.5
+        ax[0].annotate(f"Γ={float(k):g}", (xo[k], _last(ms[k]["robust_wrong_rate"])), textcoords="offset points", xytext=(0, (7 if lo else -12) - (0 if lo else 9 * (i % 2))), ha="center", fontsize=6.5)
     ax[0].set_title("(a) Constructed mechanism (synthetic)"); ax[0].set_xlabel("True retention ratio r"); ax[0].set_ylabel("Probability of a wrong certification at final N"); ax[0].legend(fontsize=7)
     rc = [float(r) for r in cri["results"]]
     ax[1].plot([r - 0.02 for r in rc], [_last(cri["results"][str(r)]["naive_wrong_rate"]) for r in cri["results"]], "o-", color=OI["orange"], label="Naive (Γ = 1)")
     ax[1].plot([r + 0.02 for r in rc], [_last(cri["results"][str(r)]["robust_wrong_rate"]) for r in cri["results"]], "s-", color=OI["blue"], label="Robust (Γ = r)")
-    ax[1].set_title("(b) Targeted worst-case Criteo pair (not a prevalence estimate)"); ax[1].set_xlabel("Imposed retention ratio r (campaign j thinned)"); ax[1].legend(fontsize=7)
+    ax[1].set_title("(b) Worst-case Criteo pair (not a prevalence estimate)"); ax[1].set_xlabel("Imposed retention ratio r (campaign j thinned)"); ax[1].legend(fontsize=7)
     for a in ax: a.set_ylim(-0.03, 1.03)
     _save(fig, out)
 
@@ -130,7 +136,7 @@ def fig_e6(e6: dict, out: str):
     for m, c in [("linear", OI["blue"]), ("time_decay", OI["green"])]:
         v = [g for g in e6["guaranteed"][m]["gamma_star_by_pair"].values() if g is not None]
         ax[0].hist(v, bins=np.linspace(1, 5, 33), alpha=0.55, color=c, label=f"{MODEL_LABEL[m]} (n = {len(v)} of 190)")
-    ax[0].axvline(1 / e6["p_lo"], color="k", ls=":", lw=1); ax[0].text(1 / e6["p_lo"], ax[0].get_ylim()[1] * 0.92, " 1/p_lo", fontsize=7)
+    ax[0].axvline(1 / e6["p_lo"], color="k", ls=":", lw=1); ax[0].text(1 / e6["p_lo"], ax[0].get_ylim()[1] * 0.92, r" $1/p_{\mathrm{lo}}$", fontsize=7)
     ax[0].set_xlabel("Robustness radius Γ*"); ax[0].set_ylabel("Pairs"); ax[0].set_title("(a) Guaranteed radius (hybrid rule)"); ax[0].legend(fontsize=7)
     sens = e6["empirical_primary"]["gamma_hat_sens_by_pair"]
     for G, c in [("1.25", OI["sky"]), ("1.5", OI["orange"])]:
@@ -158,7 +164,7 @@ def fig_e7(e7: dict, out: str):
     ax[3].bar(xx, [gt[l]["robust_wrong_rate"] for l in labs], 0.27, color=OI["blue"], label="Robust: wrong")
     ax[3].bar(xx + 0.27, [gt[l]["robust_unresolved_rate"] for l in labs], 0.27, color=OI["grey"], label="Robust: unresolved")
     ax[3].set_xticks(xx, [f"r = {gt[l]['r']:.2f}\n({'below' if l == 'r_low' else 'above'} observed ratio)" for l in labs], fontsize=7)
-    ax[3].set_title(f"Targeted worst-case pair {e7['G2_targeted']['pair']}", fontsize=9); ax[3].set_ylim(0, 1.03); ax[3].legend(fontsize=7)
+    ax[3].set_title(f"Targeted worst-case pair {e7['G2_targeted']['pair']}", fontsize=9); ax[3].set_ylim(0, 1.03); ax[3].legend(fontsize=7, loc="upper center", bbox_to_anchor=(0.5, -0.25), ncol=1)
     fig.suptitle("Criteo-based stress tests of the certified graph (G3 is outside the retention model: no coverage guarantee is claimed)", fontsize=9.5, y=1.03)
     _save(fig, out)
 
@@ -238,6 +244,6 @@ def fig_e10_tradeoff(res: dict, out: str):
         L0n, L1n, L0w, L1w = g(n, 0.0), g(n, 1.0), g(w, 0.0), g(w, 1.0)
         lam = (L0n - L0w) / ((L1w - L0w) - (L1n - L0n)); a.axvline(lam, color="k", ls=":", lw=1); a.text(lam, a.get_ylim()[1] * 0.9, f" break-even λ* = {lam:.3f}", fontsize=7)
         a.set_title(f"{MODEL_LABEL[m]}, r = {r}"); a.set_xlabel("Deferral cost λ (per unit |Δ| left unresolved)")
-    ax[0].set_ylabel("Normalised abstention-adjusted loss"); ax[0].legend(fontsize=7)
+    ax[0].set_ylabel("Normalized abstention-adjusted loss"); ax[0].legend(fontsize=7)
     fig.suptitle("Cost of abstention: ranking-loss tradeoff in the synthetic benchmark (not causal budget regret)", fontsize=9.5, y=1.03)
     _save(fig, out)
