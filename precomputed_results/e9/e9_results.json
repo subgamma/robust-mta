@@ -1,0 +1,956 @@
+{
+  "K": 20,
+  "alpha": 0.05,
+  "n_total": 109221,
+  "delta_grid": [
+    0.0,
+    0.0025,
+    0.005
+  ],
+  "gamma_grid": [
+    1.0,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "cs_method": "howard_eb_ratio",
+  "beta": 0.002380952380952381,
+  "alpha_used": 0.0011904761904761906,
+  "cs_running_intersection": false,
+  "sensitivity_models": [
+    "linear",
+    "time_decay"
+  ],
+  "distortion_models": [
+    "linear",
+    "time_decay",
+    "last_touch",
+    "logistic_shap"
+  ],
+  "naive_definition": "hybrid rule at Gamma=1.0 (kickoff decision 4)",
+  "boundary": "exact",
+  "cert_method": "hybrid",
+  "sensitivity": {
+    "linear": {
+      "guaranteed": true,
+      "L_day30": [
+        0.11632402499687407,
+        0.10454029360837991,
+        0.08040962875427743,
+        0.03343298333111493,
+        0.041747781628643975,
+        0.1175548646640974,
+        0.02452028314556288,
+        0.03573023064084625,
+        0.02798128971509152,
+        0.04241614084795524,
+        0.05604340674564576,
+        0.01741132820122666,
+        0.023789360236744495,
+        0.019891456821943893,
+        0.05165410173289947,
+        0.022064655595778224,
+        0.020884041031095535,
+        0.016635412264318177,
+        0.029088841093710082,
+        0.01588268990088731
+      ],
+      "U_day30": [
+        0.1352330953808489,
+        0.12137620752650835,
+        0.09205506843762401,
+        0.042161210212372534,
+        0.050090665898460854,
+        0.13727982153404011,
+        0.03191482203423524,
+        0.04446568263208497,
+        0.03524865577213795,
+        0.05359831649938702,
+        0.07229625236495574,
+        0.023607556641501198,
+        0.030567870136337612,
+        0.02654541159979118,
+        0.0658729012478902,
+        0.028724505016953426,
+        0.028432324801811192,
+        0.02364549948863578,
+        0.03886160900994254,
+        0.0226240175188906
+      ],
+      "grid": {
+        "0.0": {
+          "1.0": {
+            "n_certified": 151,
+            "n_j_over_k": 123,
+            "n_k_over_j": 28,
+            "n_unresolved": 39,
+            "n_pairs": 190,
+            "certified_fraction": 0.7947368421052632,
+            "is_naive_definition": true
+          },
+          "1.25": {
+            "n_certified": 118,
+            "n_j_over_k": 102,
+            "n_k_over_j": 16,
+            "n_unresolved": 72,
+            "n_pairs": 190,
+            "certified_fraction": 0.6210526315789474,
+            "is_naive_definition": false
+          },
+          "1.5": {
+            "n_certified": 94,
+            "n_j_over_k": 85,
+            "n_k_over_j": 9,
+            "n_unresolved": 96,
+            "n_pairs": 190,
+            "certified_fraction": 0.49473684210526314,
+            "is_naive_definition": false
+          },
+          "2.0": {
+            "n_certified": 61,
+            "n_j_over_k": 58,
+            "n_k_over_j": 3,
+            "n_unresolved": 129,
+            "n_pairs": 190,
+            "certified_fraction": 0.32105263157894737,
+            "is_naive_definition": false
+          }
+        },
+        "0.0025": {
+          "1.0": {
+            "n_certified": 136,
+            "n_j_over_k": 113,
+            "n_k_over_j": 23,
+            "n_unresolved": 54,
+            "n_pairs": 190,
+            "certified_fraction": 0.7157894736842105,
+            "is_naive_definition": true
+          },
+          "1.25": {
+            "n_certified": 107,
+            "n_j_over_k": 95,
+            "n_k_over_j": 12,
+            "n_unresolved": 83,
+            "n_pairs": 190,
+            "certified_fraction": 0.5631578947368421,
+            "is_naive_definition": false
+          },
+          "1.5": {
+            "n_certified": 83,
+            "n_j_over_k": 75,
+            "n_k_over_j": 8,
+            "n_unresolved": 107,
+            "n_pairs": 190,
+            "certified_fraction": 0.4368421052631579,
+            "is_naive_definition": false
+          },
+          "2.0": {
+            "n_certified": 56,
+            "n_j_over_k": 53,
+            "n_k_over_j": 3,
+            "n_unresolved": 134,
+            "n_pairs": 190,
+            "certified_fraction": 0.29473684210526313,
+            "is_naive_definition": false
+          }
+        },
+        "0.005": {
+          "1.0": {
+            "n_certified": 127,
+            "n_j_over_k": 108,
+            "n_k_over_j": 19,
+            "n_unresolved": 63,
+            "n_pairs": 190,
+            "certified_fraction": 0.6684210526315789,
+            "is_naive_definition": true
+          },
+          "1.25": {
+            "n_certified": 96,
+            "n_j_over_k": 87,
+            "n_k_over_j": 9,
+            "n_unresolved": 94,
+            "n_pairs": 190,
+            "certified_fraction": 0.5052631578947369,
+            "is_naive_definition": false
+          },
+          "1.5": {
+            "n_certified": 75,
+            "n_j_over_k": 70,
+            "n_k_over_j": 5,
+            "n_unresolved": 115,
+            "n_pairs": 190,
+            "certified_fraction": 0.39473684210526316,
+            "is_naive_definition": false
+          },
+          "2.0": {
+            "n_certified": 50,
+            "n_j_over_k": 48,
+            "n_k_over_j": 2,
+            "n_unresolved": 140,
+            "n_pairs": 190,
+            "certified_fraction": 0.2631578947368421,
+            "is_naive_definition": false
+          }
+        }
+      }
+    },
+    "time_decay": {
+      "guaranteed": true,
+      "L_day30": [
+        0.11743525448541199,
+        0.10385943606879847,
+        0.08579727123253443,
+        0.035108132001545306,
+        0.045326810026492116,
+        0.10827819365473831,
+        0.025447805134348633,
+        0.03900704776890404,
+        0.030161914348617994,
+        0.03894957130149359,
+        0.05457856540192884,
+        0.018591599528313987,
+        0.025468749427295392,
+        0.021134165050877646,
+        0.04735775747258133,
+        0.023626758687106415,
+        0.019510942052283757,
+        0.0161749620314165,
+        0.02733939604545234,
+        0.014767726020029048
+      ],
+      "U_day30": [
+        0.13611846800174615,
+        0.12025493976047559,
+        0.09799869456818983,
+        0.0442065650362418,
+        0.0543215703473259,
+        0.12654530625523372,
+        0.033137153684613,
+        0.0483352330562692,
+        0.03798699149268325,
+        0.049536717529569535,
+        0.07024477878685165,
+        0.025232820578836475,
+        0.03275408056068346,
+        0.028196064050081078,
+        0.06057830328366363,
+        0.03076330171676017,
+        0.0268815908271612,
+        0.023278092332641775,
+        0.03672410362925432,
+        0.02140304124121569
+      ],
+      "grid": {
+        "0.0": {
+          "1.0": {
+            "n_certified": 151,
+            "n_j_over_k": 127,
+            "n_k_over_j": 24,
+            "n_unresolved": 39,
+            "n_pairs": 190,
+            "certified_fraction": 0.7947368421052632,
+            "is_naive_definition": true
+          },
+          "1.25": {
+            "n_certified": 114,
+            "n_j_over_k": 104,
+            "n_k_over_j": 10,
+            "n_unresolved": 76,
+            "n_pairs": 190,
+            "certified_fraction": 0.6,
+            "is_naive_definition": false
+          },
+          "1.5": {
+            "n_certified": 91,
+            "n_j_over_k": 86,
+            "n_k_over_j": 5,
+            "n_unresolved": 99,
+            "n_pairs": 190,
+            "certified_fraction": 0.4789473684210526,
+            "is_naive_definition": false
+          },
+          "2.0": {
+            "n_certified": 58,
+            "n_j_over_k": 56,
+            "n_k_over_j": 2,
+            "n_unresolved": 132,
+            "n_pairs": 190,
+            "certified_fraction": 0.30526315789473685,
+            "is_naive_definition": false
+          }
+        },
+        "0.0025": {
+          "1.0": {
+            "n_certified": 139,
+            "n_j_over_k": 121,
+            "n_k_over_j": 18,
+            "n_unresolved": 51,
+            "n_pairs": 190,
+            "certified_fraction": 0.7315789473684211,
+            "is_naive_definition": true
+          },
+          "1.25": {
+            "n_certified": 103,
+            "n_j_over_k": 95,
+            "n_k_over_j": 8,
+            "n_unresolved": 87,
+            "n_pairs": 190,
+            "certified_fraction": 0.5421052631578948,
+            "is_naive_definition": false
+          },
+          "1.5": {
+            "n_certified": 83,
+            "n_j_over_k": 78,
+            "n_k_over_j": 5,
+            "n_unresolved": 107,
+            "n_pairs": 190,
+            "certified_fraction": 0.4368421052631579,
+            "is_naive_definition": false
+          },
+          "2.0": {
+            "n_certified": 54,
+            "n_j_over_k": 53,
+            "n_k_over_j": 1,
+            "n_unresolved": 136,
+            "n_pairs": 190,
+            "certified_fraction": 0.28421052631578947,
+            "is_naive_definition": false
+          }
+        },
+        "0.005": {
+          "1.0": {
+            "n_certified": 125,
+            "n_j_over_k": 110,
+            "n_k_over_j": 15,
+            "n_unresolved": 65,
+            "n_pairs": 190,
+            "certified_fraction": 0.6578947368421053,
+            "is_naive_definition": true
+          },
+          "1.25": {
+            "n_certified": 95,
+            "n_j_over_k": 87,
+            "n_k_over_j": 8,
+            "n_unresolved": 95,
+            "n_pairs": 190,
+            "certified_fraction": 0.5,
+            "is_naive_definition": false
+          },
+          "1.5": {
+            "n_certified": 72,
+            "n_j_over_k": 69,
+            "n_k_over_j": 3,
+            "n_unresolved": 118,
+            "n_pairs": 190,
+            "certified_fraction": 0.37894736842105264,
+            "is_naive_definition": false
+          },
+          "2.0": {
+            "n_certified": 49,
+            "n_j_over_k": 48,
+            "n_k_over_j": 1,
+            "n_unresolved": 141,
+            "n_pairs": 190,
+            "certified_fraction": 0.2578947368421053,
+            "is_naive_definition": false
+          }
+        }
+      }
+    }
+  },
+  "distortion": {
+    "linear": {
+      "per_campaign": [
+        {
+          "campaign_idx": 0,
+          "campaign_id": 32368244,
+          "a_j": 0.12565937971542232,
+          "q_j": 0.10530941851841678,
+          "abs_diff_q_minus_a": 0.020349961197005537
+        },
+        {
+          "campaign_idx": 1,
+          "campaign_id": 15184511,
+          "a_j": 0.11285213682674682,
+          "q_j": 0.10370716254200199,
+          "abs_diff_q_minus_a": 0.009144974284744825
+        },
+        {
+          "campaign_idx": 2,
+          "campaign_id": 9100693,
+          "a_j": 0.08615894948184913,
+          "q_j": 0.11078455608353704,
+          "abs_diff_q_minus_a": 0.024625606601687916
+        },
+        {
+          "campaign_idx": 3,
+          "campaign_id": 5544859,
+          "a_j": 0.03774208432578034,
+          "q_j": 0.04242773825546369,
+          "abs_diff_q_minus_a": 0.004685653929683349
+        },
+        {
+          "campaign_idx": 4,
+          "campaign_id": 2869134,
+          "a_j": 0.045866640062851516,
+          "q_j": 0.06237811409893702,
+          "abs_diff_q_minus_a": 0.0165114740360855
+        },
+        {
+          "campaign_idx": 5,
+          "campaign_id": 10341182,
+          "a_j": 0.12729302023968375,
+          "q_j": 0.10467767187628753,
+          "abs_diff_q_minus_a": 0.022615348363396223
+        },
+        {
+          "campaign_idx": 6,
+          "campaign_id": 9100689,
+          "a_j": 0.028170946139744853,
+          "q_j": 0.033500883529724135,
+          "abs_diff_q_minus_a": 0.005329937389979281
+        },
+        {
+          "campaign_idx": 7,
+          "campaign_id": 16184517,
+          "a_j": 0.040042898651934805,
+          "q_j": 0.04684080900193186,
+          "abs_diff_q_minus_a": 0.006797910349997056
+        },
+        {
+          "campaign_idx": 8,
+          "campaign_id": 9100692,
+          "a_j": 0.031569167840975694,
+          "q_j": 0.04160372089616466,
+          "abs_diff_q_minus_a": 0.010034553055188966
+        },
+        {
+          "campaign_idx": 9,
+          "campaign_id": 30801593,
+          "a_j": 0.04793674942947287,
+          "q_j": 0.04516530703802382,
+          "abs_diff_q_minus_a": 0.0027714423914490458
+        },
+        {
+          "campaign_idx": 10,
+          "campaign_id": 28351001,
+          "a_j": 0.06406739078926037,
+          "q_j": 0.03677864147004697,
+          "abs_diff_q_minus_a": 0.0272887493192134
+        },
+        {
+          "campaign_idx": 11,
+          "campaign_id": 17710664,
+          "a_j": 0.020470388706680467,
+          "q_j": 0.026560826214738924,
+          "abs_diff_q_minus_a": 0.006090437508058457
+        },
+        {
+          "campaign_idx": 12,
+          "campaign_id": 9100690,
+          "a_j": 0.027135891456434174,
+          "q_j": 0.0364398787778907,
+          "abs_diff_q_minus_a": 0.009303987321456524
+        },
+        {
+          "campaign_idx": 13,
+          "campaign_id": 9100691,
+          "a_j": 0.023176495529312,
+          "q_j": 0.029069501286382655,
+          "abs_diff_q_minus_a": 0.005893005757070656
+        },
+        {
+          "campaign_idx": 14,
+          "campaign_id": 15398570,
+          "a_j": 0.05867388295152702,
+          "q_j": 0.04177768011646112,
+          "abs_diff_q_minus_a": 0.016896202835065897
+        },
+        {
+          "campaign_idx": 15,
+          "campaign_id": 26891650,
+          "a_j": 0.025352604471935054,
+          "q_j": 0.03341848179379423,
+          "abs_diff_q_minus_a": 0.008065877321859177
+        },
+        {
+          "campaign_idx": 16,
+          "campaign_id": 5061834,
+          "a_j": 0.02461060743992318,
+          "q_j": 0.0267530969319087,
+          "abs_diff_q_minus_a": 0.002142489491985519
+        },
+        {
+          "campaign_idx": 17,
+          "campaign_id": 16922675,
+          "a_j": 0.020096272556086245,
+          "q_j": 0.022138599719834097,
+          "abs_diff_q_minus_a": 0.002042327163747852
+        },
+        {
+          "campaign_idx": 18,
+          "campaign_id": 29427842,
+          "a_j": 0.03391362905136615,
+          "q_j": 0.03001254337535822,
+          "abs_diff_q_minus_a": 0.0039010856760079288
+        },
+        {
+          "campaign_idx": 19,
+          "campaign_id": 14121532,
+          "a_j": 0.019210864333013257,
+          "q_j": 0.020655368473095834,
+          "abs_diff_q_minus_a": 0.0014445041400825767
+        }
+      ],
+      "sd_S_over_mean_S": 0.8031378653775466,
+      "guarantee_label": "descriptive",
+      "guaranteed_aggregate_share_elsewhere": true
+    },
+    "time_decay": {
+      "per_campaign": [
+        {
+          "campaign_idx": 0,
+          "campaign_id": 32368244,
+          "a_j": 0.1266674315800833,
+          "q_j": 0.10530941851841678,
+          "abs_diff_q_minus_a": 0.021358013061666528
+        },
+        {
+          "campaign_idx": 1,
+          "campaign_id": 15184511,
+          "a_j": 0.1119611576225117,
+          "q_j": 0.10370716254200199,
+          "abs_diff_q_minus_a": 0.00825399508050971
+        },
+        {
+          "campaign_idx": 2,
+          "campaign_id": 9100693,
+          "a_j": 0.09182651780424149,
+          "q_j": 0.11078455608353704,
+          "abs_diff_q_minus_a": 0.018958038279295555
+        },
+        {
+          "campaign_idx": 3,
+          "campaign_id": 5544859,
+          "a_j": 0.03960405798274299,
+          "q_j": 0.04242773825546369,
+          "abs_diff_q_minus_a": 0.002823680272720702
+        },
+        {
+          "campaign_idx": 4,
+          "campaign_id": 2869134,
+          "a_j": 0.04977150687339592,
+          "q_j": 0.06237811409893702,
+          "abs_diff_q_minus_a": 0.012606607225541099
+        },
+        {
+          "campaign_idx": 5,
+          "campaign_id": 10341182,
+          "a_j": 0.11730475744092421,
+          "q_j": 0.10467767187628753,
+          "abs_diff_q_minus_a": 0.01262708556463668
+        },
+        {
+          "campaign_idx": 6,
+          "campaign_id": 9100689,
+          "a_j": 0.02924744203817442,
+          "q_j": 0.033500883529724135,
+          "abs_diff_q_minus_a": 0.004253441491549714
+        },
+        {
+          "campaign_idx": 7,
+          "campaign_id": 16184517,
+          "a_j": 0.04361650419189064,
+          "q_j": 0.04684080900193186,
+          "abs_diff_q_minus_a": 0.003224304810041219
+        },
+        {
+          "campaign_idx": 8,
+          "campaign_id": 9100692,
+          "a_j": 0.034028620571845615,
+          "q_j": 0.04160372089616466,
+          "abs_diff_q_minus_a": 0.007575100324319045
+        },
+        {
+          "campaign_idx": 9,
+          "campaign_id": 30801593,
+          "a_j": 0.044181134320315577,
+          "q_j": 0.04516530703802382,
+          "abs_diff_q_minus_a": 0.0009841727177082454
+        },
+        {
+          "campaign_idx": 10,
+          "campaign_id": 28351001,
+          "a_j": 0.062319913336860655,
+          "q_j": 0.03677864147004697,
+          "abs_diff_q_minus_a": 0.025541271866813688
+        },
+        {
+          "campaign_idx": 11,
+          "campaign_id": 17710664,
+          "a_j": 0.021873311681830914,
+          "q_j": 0.026560826214738924,
+          "abs_diff_q_minus_a": 0.00468751453290801
+        },
+        {
+          "campaign_idx": 12,
+          "campaign_id": 9100690,
+          "a_j": 0.029068743997714638,
+          "q_j": 0.0364398787778907,
+          "abs_diff_q_minus_a": 0.007371134780176061
+        },
+        {
+          "campaign_idx": 13,
+          "campaign_id": 9100691,
+          "a_j": 0.024623752221112207,
+          "q_j": 0.029069501286382655,
+          "abs_diff_q_minus_a": 0.004445749065270448
+        },
+        {
+          "campaign_idx": 14,
+          "campaign_id": 15398570,
+          "a_j": 0.053890596168100824,
+          "q_j": 0.04177768011646112,
+          "abs_diff_q_minus_a": 0.0121129160516397
+        },
+        {
+          "campaign_idx": 15,
+          "campaign_id": 26891650,
+          "a_j": 0.027153230674161918,
+          "q_j": 0.03341848179379423,
+          "abs_diff_q_minus_a": 0.006265251119632314
+        },
+        {
+          "campaign_idx": 16,
+          "campaign_id": 5061834,
+          "a_j": 0.02315309572851431,
+          "q_j": 0.0267530969319087,
+          "abs_diff_q_minus_a": 0.00360000120339439
+        },
+        {
+          "campaign_idx": 17,
+          "campaign_id": 16922675,
+          "a_j": 0.019684923356331492,
+          "q_j": 0.022138599719834097,
+          "abs_diff_q_minus_a": 0.002453676363502605
+        },
+        {
+          "campaign_idx": 18,
+          "campaign_id": 29427842,
+          "a_j": 0.03197678255926857,
+          "q_j": 0.03001254337535822,
+          "abs_diff_q_minus_a": 0.001964239183910352
+        },
+        {
+          "campaign_idx": 19,
+          "campaign_id": 14121532,
+          "a_j": 0.01804651984997858,
+          "q_j": 0.020655368473095834,
+          "abs_diff_q_minus_a": 0.0026088486231172527
+        }
+      ],
+      "sd_S_over_mean_S": 0.7364557354143969,
+      "guarantee_label": "descriptive",
+      "guaranteed_aggregate_share_elsewhere": true
+    },
+    "last_touch": {
+      "per_campaign": [
+        {
+          "campaign_idx": 0,
+          "campaign_id": 32368244,
+          "a_j": 0.10530941851841678,
+          "q_j": 0.10530941851841678,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 1,
+          "campaign_id": 15184511,
+          "a_j": 0.10370716254200199,
+          "q_j": 0.10370716254200199,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 2,
+          "campaign_id": 9100693,
+          "a_j": 0.11078455608353704,
+          "q_j": 0.11078455608353704,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 3,
+          "campaign_id": 5544859,
+          "a_j": 0.04242773825546369,
+          "q_j": 0.04242773825546369,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 4,
+          "campaign_id": 2869134,
+          "a_j": 0.06237811409893702,
+          "q_j": 0.06237811409893702,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 5,
+          "campaign_id": 10341182,
+          "a_j": 0.10467767187628753,
+          "q_j": 0.10467767187628753,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 6,
+          "campaign_id": 9100689,
+          "a_j": 0.033500883529724135,
+          "q_j": 0.033500883529724135,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 7,
+          "campaign_id": 16184517,
+          "a_j": 0.04684080900193186,
+          "q_j": 0.04684080900193186,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 8,
+          "campaign_id": 9100692,
+          "a_j": 0.04160372089616466,
+          "q_j": 0.04160372089616466,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 9,
+          "campaign_id": 30801593,
+          "a_j": 0.04516530703802382,
+          "q_j": 0.04516530703802382,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 10,
+          "campaign_id": 28351001,
+          "a_j": 0.03677864147004697,
+          "q_j": 0.03677864147004697,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 11,
+          "campaign_id": 17710664,
+          "a_j": 0.026560826214738924,
+          "q_j": 0.026560826214738924,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 12,
+          "campaign_id": 9100690,
+          "a_j": 0.0364398787778907,
+          "q_j": 0.0364398787778907,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 13,
+          "campaign_id": 9100691,
+          "a_j": 0.029069501286382655,
+          "q_j": 0.029069501286382655,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 14,
+          "campaign_id": 15398570,
+          "a_j": 0.04177768011646112,
+          "q_j": 0.04177768011646112,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 15,
+          "campaign_id": 26891650,
+          "a_j": 0.03341848179379423,
+          "q_j": 0.03341848179379423,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 16,
+          "campaign_id": 5061834,
+          "a_j": 0.0267530969319087,
+          "q_j": 0.0267530969319087,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 17,
+          "campaign_id": 16922675,
+          "a_j": 0.022138599719834097,
+          "q_j": 0.022138599719834097,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 18,
+          "campaign_id": 29427842,
+          "a_j": 0.03001254337535822,
+          "q_j": 0.03001254337535822,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 19,
+          "campaign_id": 14121532,
+          "a_j": 0.020655368473095834,
+          "q_j": 0.020655368473095834,
+          "abs_diff_q_minus_a": 0.0
+        }
+      ],
+      "sd_S_over_mean_S": 0.0,
+      "guarantee_label": "descriptive",
+      "guaranteed_aggregate_share_elsewhere": false
+    },
+    "logistic_shap": {
+      "per_campaign": [
+        {
+          "campaign_idx": 0,
+          "campaign_id": 32368244,
+          "a_j": 0.10530941851841678,
+          "q_j": 0.10530941851841678,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 1,
+          "campaign_id": 15184511,
+          "a_j": 0.10370716254200199,
+          "q_j": 0.10370716254200199,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 2,
+          "campaign_id": 9100693,
+          "a_j": 0.11078455608353704,
+          "q_j": 0.11078455608353704,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 3,
+          "campaign_id": 5544859,
+          "a_j": 0.04242773825546369,
+          "q_j": 0.04242773825546369,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 4,
+          "campaign_id": 2869134,
+          "a_j": 0.06237811409893702,
+          "q_j": 0.06237811409893702,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 5,
+          "campaign_id": 10341182,
+          "a_j": 0.10467767187628753,
+          "q_j": 0.10467767187628753,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 6,
+          "campaign_id": 9100689,
+          "a_j": 0.033500883529724135,
+          "q_j": 0.033500883529724135,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 7,
+          "campaign_id": 16184517,
+          "a_j": 0.04684080900193186,
+          "q_j": 0.04684080900193186,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 8,
+          "campaign_id": 9100692,
+          "a_j": 0.04160372089616466,
+          "q_j": 0.04160372089616466,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 9,
+          "campaign_id": 30801593,
+          "a_j": 0.04516530703802382,
+          "q_j": 0.04516530703802382,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 10,
+          "campaign_id": 28351001,
+          "a_j": 0.03677864147004697,
+          "q_j": 0.03677864147004697,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 11,
+          "campaign_id": 17710664,
+          "a_j": 0.026560826214738924,
+          "q_j": 0.026560826214738924,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 12,
+          "campaign_id": 9100690,
+          "a_j": 0.0364398787778907,
+          "q_j": 0.0364398787778907,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 13,
+          "campaign_id": 9100691,
+          "a_j": 0.029069501286382655,
+          "q_j": 0.029069501286382655,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 14,
+          "campaign_id": 15398570,
+          "a_j": 0.04177768011646112,
+          "q_j": 0.04177768011646112,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 15,
+          "campaign_id": 26891650,
+          "a_j": 0.03341848179379423,
+          "q_j": 0.03341848179379423,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 16,
+          "campaign_id": 5061834,
+          "a_j": 0.0267530969319087,
+          "q_j": 0.0267530969319087,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 17,
+          "campaign_id": 16922675,
+          "a_j": 0.022138599719834097,
+          "q_j": 0.022138599719834097,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 18,
+          "campaign_id": 29427842,
+          "a_j": 0.03001254337535822,
+          "q_j": 0.03001254337535822,
+          "abs_diff_q_minus_a": 0.0
+        },
+        {
+          "campaign_idx": 19,
+          "campaign_id": 14121532,
+          "a_j": 0.020655368473095834,
+          "q_j": 0.020655368473095834,
+          "abs_diff_q_minus_a": 0.0
+        }
+      ],
+      "sd_S_over_mean_S": 0.0,
+      "guarantee_label": "descriptive",
+      "guaranteed_aggregate_share_elsewhere": false
+    }
+  },
+  "configuration": {
+    "label": "D",
+    "cert_method": "hybrid",
+    "boundary": "exact"
+  }
+}

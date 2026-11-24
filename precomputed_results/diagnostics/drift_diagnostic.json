@@ -1,0 +1,39 @@
+{
+ "alpha_prime": 0.0025,
+ "n_conversions": 109221,
+ "status_by_campaign": {
+  "0": "interval",
+  "1": "interval",
+  "2": "empty",
+  "3": "empty",
+  "4": "empty",
+  "5": "interval",
+  "6": "empty",
+  "7": "interval",
+  "8": "interval",
+  "9": "interval",
+  "10": "interval",
+  "11": "interval",
+  "12": "interval",
+  "13": "interval",
+  "14": "empty",
+  "15": "interval",
+  "16": "interval",
+  "17": "interval",
+  "18": "interval",
+  "19": "interval"
+ },
+ "n_reject_constant_share": 5,
+ "rejecting_campaigns": [
+  2,
+  3,
+  4,
+  6,
+  14
+ ],
+ "n_move_gt10pct_first_vs_last_fifth": 16,
+ "definition_move": "|share in last fifth - share in first fifth| / share in first fifth, linear aggregate shares",
+ "campaign3_share_first_fifth": 0.07814442850310856,
+ "campaign3_share_last_fifth": 0.00036745567565912363,
+ "wall_time_s": 81.72759461402893
+}

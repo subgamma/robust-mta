@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anytime-attribution"
+version = "0.1.0"
+description = "Robust multi-touch attribution under incomplete observability: partial identification and anytime-valid certification"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+authors = [{ name = "Tharun Kumar Reddy Amanaganti" }]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "polars",
+    "matplotlib",
+    "pyyaml",
+    "scikit-learn",
+    "shap",
+    "torch",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/subgamma/robust-mta"
+Repository = "https://github.com/subgamma/robust-mta"
+Issues = "https://github.com/subgamma/robust-mta/issues"
+
+[tool.setuptools.packages.find]
+include = ["anytime_attribution*"]

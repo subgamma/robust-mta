@@ -1,0 +1,18 @@
+{
+ "part1": {
+  "cases": 200000,
+  "clipped_gt_direct": 3662,
+  "of_which_clipped_positive": 192,
+  "certification_would_change_at_delta": 3
+ },
+ "part2": {
+  "checkpoints": 25,
+  "pair_gamma_evals": 28500,
+  "clipped_gt_direct": 0,
+  "clipped_gt_direct_and_clipped_positive": 0,
+  "certification_changes": 0,
+  "gamma_star_changes": 0,
+  "max_gain_when_clipped_gt_direct": 0.0,
+  "first_t_clipped_positive_gain": null
+ }
+}

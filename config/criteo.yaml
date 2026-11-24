@@ -1,0 +1,54 @@
+# Criteo ingestion configuration. Values are fixed from days 1-7 (warm-up) only; do not edit them based on
+# anything observed in the monitored window (days 8-30). The cap is part of the estimand (A4) and models are
+# frozen after warm-up (A1). Provenance of each value: docs/criteo_preprocessing.md.
+
+dataset:
+  path: data/criteo_attribution_dataset.tsv.gz
+  source: https://huggingface.co/datasets/criteo/criteo-attribution-dataset
+  n_rows_raw: 16468027
+
+# Assumption A4: lookback window and max-touch rule, chosen from warm-up touch-count and lag distributions
+# (quantile tables in docs/criteo_preprocessing.md).
+cap:
+  lookback_days: 7          # round number matching the warm-up window itself;
+                             # day-7 conversions (fullest lookback available
+                             # within warm-up) have 99th-pct tau = 6.19 days,
+                             # max 6.94 days -- essentially all mass is within 7.
+  max_touches: 10           # covers 99.73% of warm-up journeys uncapped
+                             # (99th pct = 6 touches, 99.9th pct = 15, max = 40).
+
+# Top-K campaigns by distinct converting-journey count in warm-up. K=20 on the primary
+# ((uid, conversion_id)) construction; K=10 is used only on the secondary construction below.
+campaigns:
+  k_primary: 20
+  top_20:
+    [32368244, 15184511, 9100693, 5544859, 2869134, 10341182, 9100689,
+     16184517, 9100692, 30801593, 28351001, 17710664, 9100690, 9100691,
+     15398570, 26891650, 5061834, 16922675, 29427842, 14121532]
+
+# Secondary ("literature-convention linkage") construction, following CAMTA/CausalMTA. Artifacts built from this
+# section must be labelled "literature-convention linkage". Top-10 by warm-up impression count (most exposed),
+# with the same lookback_days/max_touches cap as above plus a minimum-touchpoint filter; the choices the source
+# papers leave open are listed in docs/criteo_preprocessing.md.
+secondary:
+  k: 10
+  top_10_by_exposure:
+    [30801593, 10341182, 17686799, 5061834, 15398570, 30491418, 15184511,
+     28351001, 31772643, 32368244]
+  min_touches: 3          # "journeys with more than three touchpoints"
+  negative_n_sample: 200000  # candidate non-converting users sampled before
+                              # the min_touches filter (warm-up only)
+
+days:
+  warmup: [1, 7]      # A1: frozen models trained on this window only
+  monitored: [8, 30]  # credits materialized and certification runs on this window
+  # Conversions with conv_day > 30 exist in the raw data and are out of scope; counts in docs/criteo_preprocessing.md.
+
+certification:
+  delta: 0.005
+  alpha: 0.05
+  gamma_grid: [1, 1.25, 1.5, 2]
+  p_lo: 0.2   # dashboard-envelope floor: a representative operating point, not estimated from data
+              # (Criteo has no observed retention probabilities); see the E9 sensitivity sweep
+
+seed: 0  # every stochastic step takes this seed

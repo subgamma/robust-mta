@@ -1,0 +1,14 @@
+source,detail,reversal_rate
+sampling,bootstrap B=200,0.0000
+model_choice (primary),time_decay,0.0000
+model_choice (primary),last_touch,0.0104
+model_choice (primary),logistic_shap,0.0104
+observability (primary, G2),mean over r,0.0000
+model_choice (secondary),last_touch,0.0000
+model_choice (secondary),time_decay,0.0000
+model_choice (secondary),logistic_shap,0.0000
+model_choice (secondary),darnn,0.0000
+darnn_seed (secondary),seed 1 vs 0,0.0000
+darnn_seed (secondary),seed 2 vs 0,0.0000
+darnn_seed (secondary),seed 3 vs 0,0.0000
+darnn_seed (secondary),seed 4 vs 0,0.0000

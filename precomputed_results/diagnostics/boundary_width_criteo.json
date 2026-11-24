@@ -1,0 +1,119 @@
+{
+ "K": 20,
+ "alpha": 0.05,
+ "n": 109221,
+ "by_model": {
+  "linear": {
+   "500": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8691599721599871,
+    "numerator_width_reduction_pct_median": 13.084002784001292,
+    "ratio_box_width_reduction_pct_median": 26.580091673598428,
+    "numerator_width_reduction_pct_min_max": [
+     11.700100793861557,
+     14.00980483272437
+    ]
+   },
+   "1000": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8753860749243934,
+    "numerator_width_reduction_pct_median": 12.461392507560664,
+    "ratio_box_width_reduction_pct_median": 18.645366343696402,
+    "numerator_width_reduction_pct_min_max": [
+     10.992583513216092,
+     14.701919652099416
+    ]
+   },
+   "5000": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8587342480795916,
+    "numerator_width_reduction_pct_median": 14.126575192040836,
+    "ratio_box_width_reduction_pct_median": 14.88618553874489,
+    "numerator_width_reduction_pct_min_max": [
+     10.35907165276615,
+     19.988864722103706
+    ]
+   },
+   "20000": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8025627433961444,
+    "numerator_width_reduction_pct_median": 19.743725660385557,
+    "ratio_box_width_reduction_pct_median": 19.20267918087768,
+    "numerator_width_reduction_pct_min_max": [
+     15.248917084959235,
+     19.989302293053147
+    ]
+   },
+   "50000": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8192516782436798,
+    "numerator_width_reduction_pct_median": 18.074832175632018,
+    "ratio_box_width_reduction_pct_median": 17.030959271500667,
+    "numerator_width_reduction_pct_min_max": [
+     11.697393522113197,
+     19.65829431575521
+    ]
+   },
+   "109221": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8434002250035875,
+    "numerator_width_reduction_pct_median": 15.659977499641254,
+    "ratio_box_width_reduction_pct_median": 14.553016312910117,
+    "numerator_width_reduction_pct_min_max": [
+     8.732210581746413,
+     18.17272907434413
+    ]
+   }
+  },
+  "time_decay": {
+   "500": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8690473758943967,
+    "numerator_width_reduction_pct_median": 13.095262410560327,
+    "ratio_box_width_reduction_pct_median": 27.82218132882409,
+    "numerator_width_reduction_pct_min_max": [
+     11.662495954941976,
+     13.898523999527256
+    ]
+   },
+   "1000": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8756358828627954,
+    "numerator_width_reduction_pct_median": 12.436411713720464,
+    "ratio_box_width_reduction_pct_median": 19.130368295693934,
+    "numerator_width_reduction_pct_min_max": [
+     10.782153367827519,
+     14.49944156585249
+    ]
+   },
+   "5000": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8791547994464683,
+    "numerator_width_reduction_pct_median": 12.084520055353165,
+    "ratio_box_width_reduction_pct_median": 13.303187857175269,
+    "numerator_width_reduction_pct_min_max": [
+     10.224720644613194,
+     19.98353269018963
+    ]
+   },
+   "20000": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8039798471794037,
+    "numerator_width_reduction_pct_median": 19.602015282059625,
+    "ratio_box_width_reduction_pct_median": 19.252523984110216,
+    "numerator_width_reduction_pct_min_max": [
+     16.275076337096163,
+     19.995467878181127
+    ]
+   },
+   "50000": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8153963600370706,
+    "numerator_width_reduction_pct_median": 18.46036399629294,
+    "ratio_box_width_reduction_pct_median": 17.82135507775744,
+    "numerator_width_reduction_pct_min_max": [
+     12.75928796175404,
+     19.929178975088934
+    ]
+   },
+   "109221": {
+    "numerator_halfwidth_ratio_exact_over_simplified_median": 0.8382432460548144,
+    "numerator_width_reduction_pct_median": 16.175675394518564,
+    "ratio_box_width_reduction_pct_median": 15.228732324977113,
+    "numerator_width_reduction_pct_min_max": [
+     10.043002831797788,
+     18.569025652803184
+    ]
+   }
+  }
+ }
+}

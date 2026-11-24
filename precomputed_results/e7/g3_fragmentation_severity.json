@@ -1,0 +1,35 @@
+{
+ "n_conversions": 109221,
+ "linear_mass": 160378,
+ "reps": 200,
+ "single_touch_fraction": 0.7626921562703143,
+ "by_rho": {
+  "0.2": {
+   "fraction_conversions_cut": 0.20009856163192047,
+   "fraction_conversions_fully_orphaned_(zero observed mass)": 0.17169051739134406,
+   "mean_touches_cut_per_conversion": 0.24695575942355408,
+   "fraction_of_linear_mass_lost": 0.168182387858684,
+   "mean_fraction_of_touches_removed_among_cut_conversions": 0.9290293720544911,
+   "fraction_of_single_touch_conversions_fully_orphaned": 0.20012406664906,
+   "rows_emitted_per_conversion": 1.0
+  },
+  "0.4": {
+   "fraction_conversions_cut": 0.40010771738035744,
+   "fraction_conversions_fully_orphaned_(zero observed mass)": 0.34329272758901697,
+   "mean_touches_cut_per_conversion": 0.49393037968888764,
+   "fraction_of_linear_mass_lost": 0.3363776203718715,
+   "mean_fraction_of_touches_removed_among_cut_conversions": 0.9290034895718787,
+   "fraction_of_single_touch_conversions_fully_orphaned": 0.40000462173777335,
+   "rows_emitted_per_conversion": 1.0
+  },
+  "0.6": {
+   "fraction_conversions_cut": 0.6000168007983813,
+   "fraction_conversions_fully_orphaned_(zero observed mass)": 0.5149266166762803,
+   "mean_touches_cut_per_conversion": 0.7406043251755612,
+   "fraction_of_linear_mass_lost": 0.5043680866453003,
+   "mean_fraction_of_touches_removed_among_cut_conversions": 0.929081632824491,
+   "fraction_of_single_touch_conversions_fully_orphaned": 0.600028630765168,
+   "rows_emitted_per_conversion": 1.0
+  }
+ }
+}

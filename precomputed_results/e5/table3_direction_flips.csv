@@ -1,0 +1,2 @@
+model,Gamma,pair,checkpoint_before,checkpoint_after,direction_before,direction_after,gap_before_jk,gap_before_kj,gap_after_jk,gap_after_kj
+# no direction flips detected in any (model,Gamma) cell

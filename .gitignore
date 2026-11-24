@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+# OS
+.DS_Store
+# Raw Criteo data (large, CC-BY-NC-SA-4.0; download with scripts/download_criteo.py)
+data/*
+!data/.gitkeep
+# Everything produced by the reproduction steps
+results/
+figures/
+generated_tables/
+*.pkl
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc

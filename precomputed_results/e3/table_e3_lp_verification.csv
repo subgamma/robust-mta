@@ -1,0 +1,9 @@
+cell,Gamma_eff,regime,prop2_max_abs_dev_LP,prop3_max_abs_dev_LP,inadmissible_attaining_configs,frac_conservative_strictly_larger,mean_width_reduction_sharp_vs_conservative
+"Gamma=1.25,p_lo=1e-06",1.25,ratio constraint binding,4.440892098500626e-16,4.440892098500626e-16,0,0.0,0.0
+"Gamma=2.0,p_lo=1e-06",2.0,ratio constraint binding,3.3306690738754696e-16,4.440892098500626e-16,0,0.0,0.0
+"Gamma=1.25,p_lo=0.8",1.25,ratio constraint binding,4.440892098500626e-16,3.3306690738754696e-16,0,0.0,0.0
+"Gamma=1.5,p_lo=0.8",1.25,floor binding (Gamma > 1/p_lo),6.40321129452559e-14,9.992007221626409e-14,0,1.0,0.4488771003150408
+"Gamma=2.0,p_lo=0.8",1.25,floor binding (Gamma > 1/p_lo),6.145084441300241e-14,2.1760371282653068e-14,0,1.0,0.6763102671049548
+"Gamma=2.0,p_lo=0.5",2.0,ratio constraint binding,3.0531133177191805e-16,3.3306690738754696e-16,0,0.0,0.0
+"Gamma=5.0,p_lo=0.2",5.0,ratio constraint binding,3.3306690738754696e-16,3.400058012914542e-16,0,0.0,0.0
+"Gamma=3.0,p_lo=0.2",3.0,ratio constraint binding,5.551115123125783e-16,4.440892098500626e-16,0,0.0,0.0

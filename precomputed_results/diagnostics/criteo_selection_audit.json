@@ -1,0 +1,63 @@
+{
+ "boundary_conv_day_of_ts_604799,604800,2591999,2592000": [
+  7,
+  8,
+  30,
+  31
+ ],
+ "raw_day7_conversion_ts_min_max": [
+  518488,
+  604789
+ ],
+ "raw_day8_conversion_ts_min_max": [
+  604818,
+  691199
+ ],
+ "warmup_max_touch_ts": 604730,
+ "warmup_conv_ts_max": 604789,
+ "monitored_conv_ts_min": 604818,
+ "warmup_events": 65372,
+ "monitored_events": 274337,
+ "primary_top20_recomputed_equals_config_exact_order": true,
+ "primary_top20_recomputed_equals_config_as_set": true,
+ "primary_overlap_warmup_vs_monitored_top20": 19,
+ "primary_spearman_warm_vs_monitored_counts_within_top20": [
+  0.8075187969924811,
+  1.672632854671641e-05
+ ],
+ "monitored_events_total": 274337,
+ "monitored_events_on_top20": 123439,
+ "monitored_events_multi_campaign": 0,
+ "primary_stream_n": 109221,
+ "primary_stream_B": 10.0,
+ "primary_stream_max_T": 10.0,
+ "primary_stream_min_T": 1.0,
+ "primary_stream_rows_with_nonzero_masses_on_more_than_one_campaign": 0,
+ "primary_stream_equals_monitored_events_on_top20_after_cap": [
+  109221,
+  123439
+ ],
+ "primary_stream_chronological": true,
+ "primary_stream_conv_time_days_min_max": [
+  7.000208333333333,
+  29.999131944444443
+ ],
+ "raw_touch_rows_of_processed_journeys_off_top20": 0,
+ "monitored_users": 213920,
+ "monitored_users_also_in_warmup_conversions": 14644,
+ "touch_rows_shared_between_warmup_and_monitored_conversions": 0,
+ "secondary_top10_by_impression_timestamp_day_le7_equals_config": [
+  true,
+  true
+ ],
+ "secondary_top10_all_rows_equals_config_as_set(any_day)": false,
+ "secondary_top10_by_impression_days_gt7_overlap_with_config": 7,
+ "secondary_config_min_touches": 3,
+ "secondary_n_journeys_min_touches_cfg(>cfg)": 20089,
+ "secondary_n_journeys_min_touches_cfg-1(>=cfg)": 27495,
+ "secondary_min_touch_count_observed": 4,
+ "secondary_max_touch_count_observed": 10,
+ "secondary_T_le_B": true,
+ "secondary_all_touches_on_top10": true,
+ "secondary_earliest_touch_day_of_monitored_journeys": 0.23592592592592593
+}

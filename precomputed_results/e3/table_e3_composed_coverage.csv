@@ -1,0 +1,15 @@
+condition,coverage_n5000,coverage_n20000,median_width_n20000
+linear|interior|sharp_Gamma_eff=1.25,1.0,1.0,0.1137459037641446
+linear|interior|conservative_Gamma=2,1.0,1.0,0.26433383504127467
+linear|vertex_A_low|sharp_Gamma_eff=1.25,1.0,1.0,0.13201631328333077
+linear|vertex_A_low|conservative_Gamma=2,1.0,1.0,0.2989610379579748
+linear|vertex_A_high|sharp_Gamma_eff=1.25,1.0,1.0,0.10116681255159068
+linear|vertex_A_high|conservative_Gamma=2,1.0,1.0,0.23486556699721484
+time_decay|interior|sharp_Gamma_eff=1.25,1.0,1.0,0.11830647418913305
+time_decay|interior|conservative_Gamma=2,1.0,1.0,0.2687840435392446
+time_decay|vertex_A_low|sharp_Gamma_eff=1.25,1.0,1.0,0.13743195631540106
+time_decay|vertex_A_low|conservative_Gamma=2,1.0,1.0,0.3042635956571822
+time_decay|vertex_A_high|sharp_Gamma_eff=1.25,1.0,1.0,0.10566366684241066
+time_decay|vertex_A_high|conservative_Gamma=2,1.0,1.0,0.23956059091496498
+linear|negctl_vertex|NEGATIVE CONTROL Gamma_used=1 (true ratio 2),0.985,0.0,0.1327180415032948
+time_decay|negctl_vertex|NEGATIVE CONTROL Gamma_used=1 (true ratio 2),1.0,0.0,0.15154684963130444

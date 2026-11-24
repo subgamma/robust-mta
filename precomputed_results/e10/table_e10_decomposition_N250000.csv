@@ -1,0 +1,21 @@
+model,r_true,rule,Gamma,Gamma_eff,n_actionable,n_observability_limited,n_oracle_certifiable,n_boundary_ambiguous_actionable,mean_n_currently_certified_correct_actionable,"mean_n_sampling_limited_(oracle-certifiable, uncertified)",mean_wrong_direction_certifications_actionable,mean_certifications_of_nonactionable_pairs,mean_finite_sample_shortfall_oracle_minus_hybrid_gap_(oracle-certifiable)
+linear,1.25,naive,1.0,1.0,43,2,41,0,38.63,2.37,0.0,1.0,0.005089906253254686
+linear,1.25,wellspec,1.25,1.25,43,17,25,1,22.29,2.71,0.0,0.0,0.004496019974783817
+linear,1.5,naive,1.0,1.0,43,6,36,1,36.0,0.0,1.6,1.0,0.005251315548503804
+linear,1.5,wellspec,1.5,1.5,43,29,13,1,8.24,4.76,0.0,0.0,0.00418570204749793
+linear,2.0,naive,1.0,1.0,43,9,34,0,31.93,2.07,5.96,1.0,0.005443075665901636
+linear,2.0,wellspec,2.0,2.0,43,41,1,1,1.0,0.0,0.0,0.0,0.004022448695925921
+linear,2.0,misspec1.25,1.25,1.25,43,22,21,0,18.0,3.0,0.04,0.55,0.004858566036428976
+linear,2.5,naive,1.0,1.0,43,13,29,1,27.009999999999998,1.99,8.219999999999999,1.1,0.005666057204237298
+linear,2.5,wellspec,2.5,2.5,43,43,0,0,0.0,0.0,0.0,0.0,
+linear,2.5,misspec1.25,1.25,1.25,43,24,19,0,16.66,2.34,3.87,1.0,0.005085315252453017
+time_decay,1.25,naive,1.0,1.0,42,4,38,0,36.55,1.45,0.0,0.0,0.00529503995038418
+time_decay,1.25,wellspec,1.25,1.25,42,12,29,1,23.24,5.76,0.0,0.0,0.004514262825965487
+time_decay,1.5,naive,1.0,1.0,42,8,34,0,34.0,0.0,2.43,1.1099999999999999,0.005429232664111827
+time_decay,1.5,wellspec,1.5,1.5,42,28,14,0,11.0,3.0,0.0,0.0,0.004293259094015026
+time_decay,2.0,naive,1.0,1.0,42,11,31,0,30.89,0.10999999999999999,6.99,2.0,0.005703354428121457
+time_decay,2.0,wellspec,2.0,2.0,42,40,2,0,2.0,0.0,0.0,0.0,0.004010330883708481
+time_decay,2.0,misspec1.25,1.25,1.25,42,20,22,0,19.1,2.9000000000000004,1.06,0.0,0.0049678753204602626
+time_decay,2.5,naive,1.0,1.0,42,12,29,1,26.86,2.14,11.0,2.0,0.005858766256072895
+time_decay,2.5,wellspec,2.5,2.5,42,42,0,0,0.0,0.0,0.0,0.0,
+time_decay,2.5,misspec1.25,1.25,1.25,42,22,20,0,18.48,1.52,4.98,0.0,0.005196941947000882

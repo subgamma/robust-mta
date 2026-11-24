@@ -1,0 +1,13 @@
+model,guaranteed,Gamma,median_t_first_certified,n_current_certified,n_ever_certified,n_withdrawn,n_pairs,current_unresolved_fraction_day30,n_sampling_limited,n_observability_limited,n_pairs_with_flip,n_flip_events
+linear,True,1.0,15750.0,127,136,9,190,0.3316,37,26,0,0
+linear,True,1.25,18750.0,96,114,18,190,0.4947,28,66,0,0
+linear,True,1.5,21250.0,75,92,17,190,0.6053,25,90,0,0
+time_decay,True,1.0,18000.0,125,139,14,190,0.3421,40,25,0,0
+time_decay,True,1.25,18500.0,95,111,16,190,0.5000,31,64,0,0
+time_decay,True,1.5,21500.0,72,87,15,190,0.6211,25,93,0,0
+last_touch,False,1.0,6000.0,121,145,24,190,0.3632,29,40,0,0
+last_touch,False,1.25,8000.0,81,102,21,190,0.5737,69,40,0,0
+last_touch,False,1.5,13500.0,57,79,22,190,0.7000,93,40,0,0
+logistic_shap,False,1.0,6000.0,121,145,24,190,0.3632,29,40,0,0
+logistic_shap,False,1.25,8000.0,81,102,21,190,0.5737,69,40,0,0
+logistic_shap,False,1.5,13500.0,57,79,22,190,0.7000,93,40,0,0
